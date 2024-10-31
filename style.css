@@ -1,0 +1,348 @@
+    /******************************************** STILI DI TESTO **************************************/
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap');
+
+
+    /******************************************** GENERALE **************************************/
+    #map {
+      display: block;
+      width: 100%;
+      margin-bottom: 0px;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+    }
+
+    .fa-magnifying-glass {
+      color: #FE8E14;
+      display: block;
+    }
+    .fa-person-running,
+    .fa-stopwatch {
+      color: #000000;
+      display: block;
+    }
+
+    .slide-container h2 {
+      display: block;
+      font-family: "Poppins", sans-serif;
+      font-weight: 600;
+      font-style: normal;
+      line-height: 1.6;
+      letter-spacing: 0px;
+      color: #000000;
+    }
+
+    .slide-container h1 {
+      display: block;
+      font-family: "Poppins", sans-serif;
+      font-weight: 600;
+      font-style: normal;
+      line-height: 1.6;
+      letter-spacing: 0px;
+      color: black;
+    }
+
+    .slide-container p {
+      display: block;
+      font-family: "Poppins", sans-serif;
+      font-weight: 400;
+      font-style: normal;
+      line-height: 1.6;
+      letter-spacing: 0px;
+      color: black;
+    }
+
+    /******************************************** MEDIA QUERIES **************************************/
+    @media (max-width: 480px) {
+      #map {
+        height: 300px;
+      }
+      .slide-container h2 {
+        font-size: 16px;
+      }
+      .slide-container h1 {
+        font-size: 17px;
+      }
+      .slide-container p {
+        font-size: 15px;
+      }
+      .slider-for {
+        margin-top: 60px;
+      }
+      .sld-wrp {
+        width: 99%; /* fisso il valore */
+        margin: 0 auto;
+        margin-top: 30px;
+      }
+      /* gestione freccie */
+      .slick-prev {
+        left: calc(50% - 155px);
+      }
+      .slick-next {
+        right: calc(50% - 155px);
+      }
+    }
+    
+    @media (min-width: 481px) and (max-width: 767px) {
+      #map {
+        height: 300px;
+      }
+      .slide-container h2 {
+        font-size: 16px;
+      }
+      .slide-container h1 {
+        font-size: 17px;
+      }
+      .slide-container p {
+        font-size: 15px;
+      }
+      .slider-for {
+        margin-top: 60px;
+      }
+      .sld-wrp {
+        width: 99%; /* fisso il valore */
+        margin: 0 auto;
+        margin-top: 30px;
+      }
+      /* gestione freccie */
+      .slick-prev {
+        left: calc(50% - 155px);
+      }
+      .slick-next {
+        right: calc(50% - 155px);
+      }
+    }
+    
+    @media (min-width: 768px) and (max-width: 1024px) {
+      #map {
+        height: 500px;
+      }
+      .slide-container h2 {
+        font-size: 17px;
+      }
+      .slide-container h1 {
+        font-size: 18px;
+      }
+      .slide-container p {
+        font-size: 16px;
+      }
+      .slider-for {
+        margin-top: 80px;
+      }
+      .sld-wrp {
+        width: 90%; /* fisso il valore */
+        margin: 0 auto;
+        margin-top: 70px;
+        background-color: rgba(0, 0, 255, 0);
+      }
+      /* gestione freccie */
+      .slick-prev {
+        left: calc(50% - max-width=90%);
+      }
+      .slick-next {
+        right: calc(50% - max-width=90%);
+      }
+    }
+    
+    @media (min-width: 1025px) and (max-width: 1280px) {
+      #map {
+        height: 500px;
+      }
+      .slide-container h2 {
+        font-size: 17px;
+      }
+      .slide-container h1 {
+        font-size: 18px;
+      }
+      .slide-container p {
+        font-size: 16px;
+      }
+      .slider-for {
+        margin-top: 80px;
+      }
+      .sld-wrp {
+        width: 90%; /* fisso il valore */
+        margin: 0 auto;
+        margin-top: 70px;
+        background-color: rgba(0, 0, 255, 0);
+      }
+      /* gestione freccie */
+      .slick-prev {
+        left: calc(50% - max-width=90%);
+      }
+      .slick-next {
+        right: calc(50% - max-width=90%);
+      }
+    }
+    
+    @media (min-width: 1281px) {
+      #map {
+        height: 500px;
+      }
+      .slide-container h2 {
+        font-size: 19px;
+      }
+      .slide-container h1 {
+        font-size: 20px;
+      }
+      .slide-container p {
+        font-size: 17px;
+      }
+      .slider-for {
+        margin-top: 80px;
+      }
+      .sld-wrp {
+        max-width: 90%; /* fisso il valore */
+        margin: 0 auto;
+        margin-top: 90px;
+      }
+      /* gestione freccie */
+      .slick-prev {
+        left: calc(50% - max-width=90%);
+      }
+      .slick-next {
+        right: calc(50% - max-width=90%);
+      }
+    }
+
+    /******************************************** STILI PAGINA ED ELEMENTI **************************************/
+    html,  /* https://www.svgviewer.dev/s/61421/gondola-boat */
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: "Poppins", sans-serif;
+      background: linear-gradient(to bottom, rgba(236, 217, 192, 0.92), rgba(236, 217, 192, 0.92)),
+        url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxOS4wLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApLS0+CjwhLS1MaWNlbnNlOiBDQzAuIE1hZGUgYnkgU1ZHIFJlcG86IGh0dHBzOi8vd3d3LnN2Z3JlcG8uY29tL3N2Zy8yMjA5NzMvcmlhbHRvLWJyaWRnZS12ZW5pY2UtLT4KPHN2ZyB2ZXJzaW9uPSIxLjEiIGlkPSJMYXllcl8xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDQ5MC42ODggNDkwLjY4OCIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgNDkwLjY4OCA0OTAuNjg4OyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+CiAgPGc+CiAgICA8Zz4KICAgICAgPHBhdGggZD0iTTQ5MC42MjQsMjc3LjIxMVYxNzAuNjcyYzAtNC44LTMuMjIxLTkuMDAzLTcuODcyLTEwLjI4M2wtMTg0LjA0My01MC4xOTdsLTAuMDg1LTI0Ljg5NmMwLTQuMDExLTIuMjgzLTcuNjgtNS44ODgtOS40OTMKCQkJbC00Mi42NjctMjEuMzMzYy0yLjk4Ny0xLjQ5My02LjUyOC0xLjQ5My05LjUzNiwwbC00Mi42NjcsMjEuMzMzYy0zLjU4NCwxLjgxMy01Ljg2Nyw1LjUwNC01Ljg2Nyw5LjUzNnYyNC44MzJMNy44NzIsMTYwLjM4OQoJCQlDMy4yMjEsMTYxLjY0OCwwLDE2NS44NTEsMCwxNzAuNjcydjI1NmMwLDUuODg4LDQuNzc5LDEwLjY2NywxMC42NjcsMTAuNjY3aDEwNi42NjdjNS44ODgsMCwxMC42NjctNC43NzksMTAuNjY3LTEwLjY2NwoJCQljMC01Mi45MjgsNTIuNjI5LTk2LDExNy4zMzMtOTZzMTE3LjMzMyw0My4wNzIsMTE3LjMzMyw5NmMwLDUuODg4LDQuNzc5LDEwLjY2NywxMC42NjcsMTAuNjY3SDQ4MAoJCQljNS44ODgsMCwxMC42NjctNC43NzksMTAuNjg4LTEwLjY2N1YyNzcuMzM5QzQ5MC42NjcsMjc3LjI5Niw0OTAuNjI0LDI3Ny4yNTMsNDkwLjYyNCwyNzcuMjExeiBNNDY5LjMzMyw0MTYuMDA1aC04NS45MDkKCQkJYy02LjM3OS01OS43MzMtNjUuODc3LTEwNi42NjctMTM4LjA5MS0xMDYuNjY3cy0xMzEuNzEyLDQ2LjkzMy0xMzguMDkxLDEwNi42NjdIMjEuMzMzVjI4NS40ODhsMjI0LTYxLjA3N2wyMjQsNjEuMDc3VjQxNi4wMDV6CgkJCSBNNjQsMjUxLjczOXYtMTcuMDY3YzAtNS44NjcsNC43NzktMTAuNjY3LDEwLjY2Ny0xMC42NjdzMTAuNjY3LDQuOCwxMC42NjcsMTAuNjY3djExLjI2NGwtNy44NTEsMi4xMzNMNjQsMjUxLjczOXoKCQkJIE0xNDkuMzMzLDIyOC40NjR2LTM2LjQ1OWMwLTUuODY3LDQuNzc5LTEwLjY2NywxMC42NjctMTAuNjY3czEwLjY2Nyw0LjgsMTAuNjY3LDEwLjY2N3YzMC42NTZsLTUuMTg0LDEuNDA4TDE0OS4zMzMsMjI4LjQ2NHoKCQkJIE0yMzQuNjY3LDIwMi42NzJ2LTMyYzAtNS44NjcsNC43NzktMTAuNjY3LDEwLjY2Ny0xMC42NjdTMjU2LDE2NC44MDUsMjU2LDE3MC42NzJ2MzJIMjM0LjY2N3ogTTMyMCwyMjIuNjR2LTMwLjYzNQoJCQljMC01Ljg2Nyw0Ljc3OS0xMC42NjcsMTAuNjY3LTEwLjY2N2M1Ljg4OCwwLDEwLjY2Nyw0LjgsMTAuNjY3LDEwLjY2N3YzNi40NTlsLTguMTQ5LTIuMjE5TDMyMCwyMjIuNjR6IE00MDUuMzMzLDI0NS45MTV2LTExLjI2NAoJCQljMC01Ljg2Nyw0Ljc3OS0xMC42NjcsMTAuNjY3LTEwLjY2N3MxMC42NjcsNC44LDEwLjY2NywxMC42Njd2MTcuMDY3TDQwNS4zMzMsMjQ1LjkxNXogTTQ2OS4zMzMsMjYzLjM2NUw0NDgsMjU3LjU0MXYtMjIuODY5CgkJCWMwLTE3LjY0My0xNC4zNTctMzItMzItMzJzLTMyLDE0LjM1Ny0zMiwzMnY1LjQ0bC0yMS4zMzMtNS44MjR2LTQyLjI4M2MwLTE3LjY0My0xNC4zNzktMzItMzItMzJjLTE3LjY0MywwLTMyLDE0LjM1Ny0zMiwzMgoJCQl2MjQuODMybC0yMS4zMzMtNS44MjR2LTQwLjM0MWMwLTE3LjY0My0xNC4zNzktMzItMzItMzJjLTE3LjY0MywwLTMyLDE0LjM1Ny0zMiwzMnY0MC4zNDFMMTkyLDIxNi44Mzd2LTI0LjgzMgoJCQljMC0xNy42NDMtMTQuMzc5LTMyLTMyLTMyYy0xNy42NjQsMC0zMiwxNC4zNTctMzIsMzJ2NDIuMjgzbC0yMS4zMzMsNS44MjR2LTUuNDRjMC0xNy42NDMtMTQuMzc5LTMyLTMyLTMyCgkJCWMtMTcuNjQzLDAtMzIsMTQuMzU3LTMyLDMydjIyLjg5MWwtMjEuMzMzLDUuODI0di04NC41NjVsMTg0LjEyOC01MC4yMTljNC42NTEtMS4yNTksNy44NzItNS40NjEsNy44NzItMTAuMjgzVjkxLjkzMWwzMi0xNgoJCQlsMzIsMTYuMDIxbDAuMDg1LDI2LjQzMmMwLjAyMSw0Ljc3OSwzLjI0Myw4Ljk2LDcuODcyLDEwLjI0bDE4NC4wNDMsNTAuMTk3VjI2My4zNjV6Ii8+CiAgICA8L2c+CiAgPC9nPgo8L3N2Zz4K');
+      background-repeat: repeat; /* Ripeti l'immagine di sfondo */
+      background-position: center;
+      background-size: 70px 35px; /* Dimensioni dell'icona SVG */
+    }
+    
+    /* gestione freccie */
+    .slick-prev,
+    .slick-next {
+	    z-index: 10000000000;
+    }
+
+    /* CAROSELLO MINIATURE IMMAGINI */
+    .slider-nav {
+      margin-bottom: 25px;
+    }
+
+    .slide-btn {
+      text-align: center;
+      box-sizing: border-box;
+      width: 330px;
+      height: 240px;
+      padding: 0px 20px 0px 20px;
+      background-color: rgba(255, 255, 255, 0);
+      cursor: pointer;
+    }
+
+    /* adattamento immagini */
+    .slide-btn img {
+      position: relative;
+      width: 330px;
+      height: 100%;
+      border-radius: 15px;
+      object-fit: cover;
+      border: 2px rgb(0, 0, 0);
+      box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    }
+    .glassmorphism {
+      position: absolute;
+    }
+
+    /* CAROSELLO TESTI DESCRITTIVI PER LE IMMAGINI */
+    /*
+    .slider-for {
+      display: flex;
+      align-items: center;
+      width: 100%;
+      position: relative;
+      z-index: 10;
+    }
+    */
+
+    /* PER OGNI SINGOLO CONTENITORE TESTI */
+    .slide-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      max-width: 120%; /* La larghezza massima è il 100% del contenitore genitore */
+      background-color: rgba(255, 0, 0, 0); 
+      margin: 0px 0px 20px 0px; /* solo margin bottom */
+      padding: 10px 10px 10px 10px;
+      box-sizing: border-box;
+    }
+
+    .slide-btn:hover {
+      background-color: #ebe6e000;
+    }
+
+    /******************************************** STILI EFFETTO MESS WHATSAPP **************************************/
+    .chat-bubble {
+      display: block;
+      max-width: 100%; /* Regola larghezza messaggi ricevuti */
+      word-wrap: break-word; /* Permette la divisione delle parole troppo lunghe */
+      clear: both;
+      display: inline-flex; 
+      align-items: center;
+    }    
+    
+    .chat-bubble h1, .chat-bubble h2, .chat-bubble p {
+       margin: 0px; /* Rimuovi margini interni aggiuntivi */
+    }
+
+    /* Contenitore bolla con avatar */
+    .chat-bubble-wrapper {
+        display: flex;
+        align-items: flex-end;
+        gap: 10px;
+        margin-bottom: 30px;
+    }
+    /* Avatar stile tondo */
+    .avatar {
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        object-fit: cover;
+        flex-shrink: 0;
+    }
+    
+    /* Stile della bolla di chat inviata https://usbrandcolors.com/whatsapp-colors/ */
+    .chat-bubble.sent {
+        padding: 15px;
+        background: linear-gradient(0deg, #35897E 0%, #59CE72 100%);
+        border-radius: 18px 18px 1px 18px; /* Angoli arrotondati tipo Messenger */
+        position: relative;
+        box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+        align-self: flex-end;
+        text-align: right;
+        float: right;
+    }
+    
+    /* Stile della bolla di chat ricevuta */
+    .chat-bubble.received {
+        padding: 15px;
+        background: linear-gradient(135deg, #ffffff 0%, #f1f0f0 100%);
+        border-radius: 18px 18px 18px 1px; /* Angoli arrotondati tipo Messenger */
+        position: relative;
+        box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+        align-self: flex-start;
+        text-align: left;
+        float: left;
+    }
+
+    /* Doppie spunte blu per i messaggi inviati (immagine) */
+    .chat-bubble.sent .check-marks {
+        position: absolute;
+        bottom: 2px;
+        right: 12px;
+        display: flex;
+        align-items: center;
+    }
+    /* Stile per le emoji */
+    .emoji {
+        vertical-align: middle;
+        font-size: 24px;
+        margin-right: 4px;
+    }

@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css'>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css'>
+    
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet-routing-machine/dist/leaflet-routing-machine.css" />
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css" type="text/css">
+
+    <script src="https://kit.fontawesome.com/ed4a3d9564.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <!-- SEZIONE RELATIVA SOLO ALLA MAPPA -->
+  <div id="map"></div>
+
+  <!-- SEZIONE TOTALE DEI CAROSELLI IMMAGINI E TESTI -->
+  <div class="sld-wrp" id="caroselli">
+    <!-- CAROSELLO MINIATURE IMMAGINI -->
+    <div class="slider-nav">
+      <div class="slide-btn" id="slide-1">
+        <img src="https://media01.stockfood.com/largepreviews/MjIxMDkyMzcyMA==/71320120-Giardini-Papadopoli-in-Venice-Italy.jpg" alt="foto1">
+        <div class="glassmorphism"></div>
+      </div>
+      <div class="slide-btn" id="slide-2">
+        <img src="https://www.viaggiarevenezia.it/wp-content/uploads/2018/11/santa-croce.jpg" alt="foto2">
+      </div>
+      <div class="slide-btn" id="slide-3">
+        <img src="https://lh5.googleusercontent.com/proxy/_L7Hjlw56eqJqLwFTnoxoiUpQdKkAyTLWqucdWPnI59D8ZiD2nW6zRz1U7Z1O7iiWQoroDXN7v_3OXv0pX3DW7f7Ql874ngCqfH18wFIkaCI7wvYmYGdYbHfK6gNlk7KhaeKdzwN3HxiIZo" alt="foto3">
+      </div>
+      <div class="slide-btn" id="slide-4">
+        <img src="https://www.shutterstock.com/image-photo/view-santa-maria-gloriosa-dei-600nw-429232780.jpg" alt="foto4">
+      </div>
+      <div class="slide-btn" id="slide-5">
+        <img src="https://as2.ftcdn.net/v2/jpg/04/52/97/71/1000_F_452977183_k1o2sc4DKyS4kjznyIUIPUePyqyUkWNd.jpg" alt="foto5">
+      </div>
+      <div class="slide-btn" id="slide-6">
+        <img src="https://www.veneto.info/wp-content/uploads/sites/114/venezia-museo-storia-naturale-thumbnail.jpg" alt="foto6">
+      </div>
+      <div class="slide-btn" id="slide-7">
+        <img src="https://www.italyscapes.com/wp-content/uploads/2023/06/palazzo-mocenigo-il-nero.jpg" alt="foto7">
+      </div>
+      <div class="slide-btn" id="slide-8">
+        <img src="https://www.turismoenvenecia.com/wp-content/uploads/2021/08/ca-pesaro-scaled-e1629984253189.jpg" alt="foto8">
+      </div>
+      <div class="slide-btn" id="slide-9">
+        <img src="https://venetosecrets.com/wp-content/uploads/2017/05/29042017-L1200516.jpg" alt="foto9">
+      </div>
+      <div class="slide-btn" id="slide-10">
+        <img src="https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fmedia-cdn.tripadvisor.com%2Fmedia%2Fphoto-s%2F02%2F5a%2F3a%2F4f%2Fchiesa-di-san-giacomo.jpg&f=1&nofb=1&ipt=4b399a9b4ee350c596ee80a794528570e26760ed1cb50f94dcd75a6db29e8ad7&ipo=images" alt="foto10">
+      </div>
+      <div class="slide-btn" id="slide-11">
+        <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.viaggiamo.it%2Fwp-content%2Fuploads%2F2020%2F08%2Fponte-di-rialto-venezia-storia.jpg&f=1&nofb=1&ipt=62cb55fac4a5f842589dbef4b61b090a25faaae8dccb4893802429fe01a293a2&ipo=images" alt="foto11">
+      </div>
+    </div>
+
+    <!-- CAROSELLO TESTI DESCRITTIVI PER LE IMMAGINI -->
+    <div class="slider-for">
+
+      <!------------------------------- 1 ----------------------------->
+      <div class="slide-container">
+        <div class="chat-bubble-wrapper" style="justify-content: flex-end;" id="chat-bubble-1">
+          <div class="chat-bubble sent">
+            <span class="emoji">🔍</span><p style="color: #ffffff;">Leo, dove mi trovo?</p>
+            <div class="check-marks">
+              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24"><path fill="#0040ff" d="m11.602 13.76l1.412 1.412l8.466-8.466l1.414 1.415l-9.88 9.88l-6.364-6.365l1.414-1.414l2.125 2.125zm.002-2.828l4.952-4.953l1.41 1.41l-4.952 4.953zm-2.827 5.655L7.364 18L1 11.636l1.414-1.414l1.413 1.413l-.001.001z"/></svg>
+            </div>
+          </div>  
+        </div>
+        <div class="chat-bubble-wrapper" style="justify-content: flex-start;" id="chat-bubble-2">
+          <div class="avatar"></div>
+          <div class="chat-bubble received">
+            <span class="emoji">📍</span><h1>Giardini Papadopoli</h1>
+          </div>
+        </div>
+        <div class="chat-bubble-wrapper" style="justify-content: flex-start;" id="chat-bubble-3">
+          <div class="avatar"></div>
+          <div class="chat-bubble received">
+            <p>
+              I Giardini Papadopoli, creati nel 1834 per Teresa Mosconi, furono originariamente progettati da Francesco Bagnara con specie rare. 
+              Danneggiati durante la Prima Guerra Mondiale e modificati negli anni '30, oggi il parco presenta una fitta vegetazione di alberi sempreverdi e decidui. Include anche il Giardino d'Inverno dell'hotel Papadopoli, aggiunto nel 1970.
+            </p>
+          </div>
+        </div>
+        <div class="chat-bubble-wrapper" style="justify-content: flex-start;" id="chat-bubble-4">
+          <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fhotemoji.com%2Fimages%2Femoji%2F0%2Fmmj5ipu6ds50.png&f=1&nofb=1&ipt=49bdd956a93d8fbdd84720256334ecc308a67e3c8141a46371f22ea984c58492&ipo=images" alt="Avatar" class="avatar">
+          <div class="chat-bubble received">
+            <span class="emoji">⏱️</span><p style="font-weight: 600;">Questo è il tuo punto di partenza!</p>
+          </div>
+        </div>
+      </div>
+
+      <!------------------------------- 2 ----------------------------->
+      <div class="slide-container">
+        <div class="chat-bubble-wrapper" style="justify-content: flex-end;" id="chat-bubble-1">
+          <div class="chat-bubble sent">
+            <span class="emoji">🔍</span><p style="color: #ffffff;">Leo, dove mi trovo?</p>
+            <div class="check-marks">
+              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24"><path fill="#0040ff" d="m11.602 13.76l1.412 1.412l8.466-8.466l1.414 1.415l-9.88 9.88l-6.364-6.365l1.414-1.414l2.125 2.125zm.002-2.828l4.952-4.953l1.41 1.41l-4.952 4.953zm-2.827 5.655L7.364 18L1 11.636l1.414-1.414l1.413 1.413l-.001.001z"/></svg>
+            </div>
+          </div>  
+        </div>
+        <div class="chat-bubble-wrapper" style="justify-content: flex-start;" id="chat-bubble-2">
+          <div class="avatar"></div>
+          <div class="chat-bubble received">
+            <span class="emoji">📍</span><h1>Chiesa di San Nicola da Tolentino</h1>
+          </div>
+        </div>
+        <div class="chat-bubble-wrapper" style="justify-content: flex-start;" id="chat-bubble-3">
+          <div class="avatar"></div>
+          <div class="chat-bubble received">
+            <p>
+              La Chiesa di San Nicola da Tolentino, costruita nel XVII secolo, fu progettata da Vincenzo Scamozzi. Originariamente affidata ai Teatini, divenne importante centro religioso e culturale di Venezia. 
+              Oggi è nota per la sua facciata incompiuta, gli interni barocchi e le opere d'arte, tra cui dipinti di Palma il Giovane.
+            </p>
+          </div>
+        </div>
+        <div class="chat-bubble-wrapper" style="justify-content: flex-start;" id="chat-bubble-4">
+          <div class="avatar"></div>
+          <div class="chat-bubble received">
+            <span class="emoji">🏃🏻</span><p style="font-weight: 600;">Distanza: &nbsp150 m</p>
+          </div>
+        </div>
+                <div class="chat-bubble-wrapper" style="justify-content: flex-start;" id="chat-bubble-5">
+          <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fhotemoji.com%2Fimages%2Femoji%2F0%2Fmmj5ipu6ds50.png&f=1&nofb=1&ipt=49bdd956a93d8fbdd84720256334ecc308a67e3c8141a46371f22ea984c58492&ipo=images" alt="Avatar" class="avatar">
+          <div class="chat-bubble received">
+            <span class="emoji">⏱️</span><p style="font-weight: 600;">Tempo: &nbsp1 min</p>
+          </div>
+        </div>
+      </div>
+
+      <!------------------------------- 3 ----------------------------->
+      <div class="slide-container">
+        <div class="chat-bubble-wrapper" style="justify-content: flex-end;" id="chat-bubble-1">
+          <div class="chat-bubble sent">
+            <span class="emoji">🔍</span><p style="color: #ffffff;">Leo, dove mi trovo?</p>
+            <div class="check-marks">
+              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24"><path fill="#0040ff" d="m11.602 13.76l1.412 1.412l8.466-8.466l1.414 1.415l-9.88 9.88l-6.364-6.365l1.414-1.414l2.125 2.125zm.002-2.828l4.952-4.953l1.41 1.41l-4.952 4.953zm-2.827 5.655L7.364 18L1 11.636l1.414-1.414l1.413 1.413l-.001.001z"/></svg>
+            </div>
+          </div>  
+        </div>
+        <div class="chat-bubble-wrapper" style="justify-content: flex-start;" id="chat-bubble-2">
+          <div class="avatar"></div>
+          <div class="chat-bubble received">
+            <h1>📍 Scuola Grande di San Rocco</h1>
+          </div>
+        </div>
+        <div class="chat-bubble-wrapper" style="justify-content: flex-start;" id="chat-bubble-3">
+          <div class="avatar"></div>
+          <div class="chat-bubble received">
+            <p>
+              La Scuola Grande di San Rocco, fondata nel 1478, è una delle più importanti confraternite laiche di Venezia. 
+              L'edificio attuale, progettato da Bartolomeo Bon e Sante Lombardo, fu completato nel 1560. 
+              È rinomata per il suo ciclo di dipinti di Tintoretto, realizzati tra il 1564 e il 1587, che decorano riccamente gli interni e rappresentano uno dei capolavori dell'arte veneziana.
+            </p>
+          </div>
+        </div>
+        <div class="chat-bubble-wrapper" style="justify-content: flex-start;" id="chat-bubble-4">
+          <div class="avatar"></div>
+          <div class="chat-bubble received">
+            <span class="emoji">🏃🏻</span><p style="font-weight: 600;">Distanza: &nbsp550 m</p>
+          </div>
+        </div>
+                <div class="chat-bubble-wrapper" style="justify-content: flex-start;" id="chat-bubble-5">
+          <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fhotemoji.com%2Fimages%2Femoji%2F0%2Fmmj5ipu6ds50.png&f=1&nofb=1&ipt=49bdd956a93d8fbdd84720256334ecc308a67e3c8141a46371f22ea984c58492&ipo=images" alt="Avatar" class="avatar">
+          <div class="chat-bubble received">
+            <span class="emoji">⏱️</span><p style="font-weight: 600;">Tempo: &nbsp6 min</p>
+          </div>
+        </div>
+      </div>
+
+      <!------------------------------- 4 ----------------------------->
+      <div class="slide-container">
+        <div class="chat-bubble-wrapper" style="justify-content: flex-end;" id="chat-bubble-1">
+          <div class="chat-bubble sent">
+            <span class="emoji">🔍</span><p style="color: #ffffff;">Leo, dove mi trovo?</p>
+            <div class="check-marks">
+              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24"><path fill="#0040ff" d="m11.602 13.76l1.412 1.412l8.466-8.466l1.414 1.415l-9.88 9.88l-6.364-6.365l1.414-1.414l2.125 2.125zm.002-2.828l4.952-4.953l1.41 1.41l-4.952 4.953zm-2.827 5.655L7.364 18L1 11.636l1.414-1.414l1.413 1.413l-.001.001z"/></svg>
+            </div>
+          </div>  
+        </div>
+        <div class="chat-bubble-wrapper" style="justify-content: flex-start;" id="chat-bubble-2">
+          <div class="avatar"></div>
+          <div class="chat-bubble received">
+            <h1>📍 Basilica di Santa Maria Gloriosa dei Frari</h1>
+          </div>
+        </div>
+        <div class="chat-bubble-wrapper" style="justify-content: flex-start;" id="chat-bubble-3">
+          <div class="avatar"></div>
+          <div class="chat-bubble received">
+            <p>
+              La Basilica dei Frari, iniziata nel XIII secolo e completata nel XV, è uno dei più grandi esempi di architettura gotica a Venezia. 
+              Affidata ai frati francescani, divenne un importante centro religioso e artistico della città. Ospita capolavori di Tiziano, Bellini e Donatello, oltre alle tombe di artisti e dogi, tra cui lo stesso Tiziano.
+            </p>
+          </div>
+        </div>
+        <div class="chat-bubble-wrapper" style="justify-content: flex-start;" id="chat-bubble-4">
+          <div class="avatar"></div>
+          <div class="chat-bubble received">
+            <span class="emoji">🏃🏻</span><p style="font-weight: 600;">Distanza: &nbsp735 m</p>
+          </div>
+        </div>
+                <div class="chat-bubble-wrapper" style="justify-content: flex-start;" id="chat-bubble-5">
+          <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fhotemoji.com%2Fimages%2Femoji%2F0%2Fmmj5ipu6ds50.png&f=1&nofb=1&ipt=49bdd956a93d8fbdd84720256334ecc308a67e3c8141a46371f22ea984c58492&ipo=images" alt="Avatar" class="avatar">
+          <div class="chat-bubble received">
+            <span class="emoji">⏱️</span><p style="font-weight: 600;">Tempo: &nbsp8 min</p>
+          </div>
+        </div>
+      </div>
+
+      <!------------------------------- 5 ----------------------------->
+      <div class="slide-container">
+        <div class="chat-bubble-wrapper" style="justify-content: flex-end;" id="chat-bubble-1">
+          <div class="chat-bubble sent">
+            <span class="emoji">🔍</span><p style="color: #ffffff;">Leo, dove mi trovo?</p>
+            <div class="check-marks">
+              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24"><path fill="#0040ff" d="m11.602 13.76l1.412 1.412l8.466-8.466l1.414 1.415l-9.88 9.88l-6.364-6.365l1.414-1.414l2.125 2.125zm.002-2.828l4.952-4.953l1.41 1.41l-4.952 4.953zm-2.827 5.655L7.364 18L1 11.636l1.414-1.414l1.413 1.413l-.001.001z"/></svg>
+            </div>
+          </div>  
+        </div>
+        <div class="chat-bubble-wrapper" style="justify-content: flex-start;" id="chat-bubble-2">
+          <div class="avatar"></div>
+          <div class="chat-bubble received">
+            <h1>📍 Scuola Grande di San Giovanni Evangelista</h1>
+          </div>
+        </div>
+        <div class="chat-bubble-wrapper" style="justify-content: flex-start;" id="chat-bubble-3">
+          <div class="avatar"></div>
+          <div class="chat-bubble received">
+            <p>
+              Fondata nel 1261, la Scuola Grande di San Giovanni Evangelista è una delle più antiche confraternite veneziane. 
+              L'edificio attuale, ricostruito nel XV secolo, è noto per il suo portale rinascimentale di Pietro Lombardo e il doppio scalone di Mauro Codussi. 
+              Celebre per la reliquia della Vera Croce, la Scuola conserva importanti opere d'arte, inclusi dipinti del Tintoretto.
+            </p>
+          </div>
+        </div>
+        <div class="chat-bubble-wrapper" style="justify-content: flex-start;" id="chat-bubble-4">
+          <div class="avatar"></div>
+          <div class="chat-bubble received">
+            <span class="emoji">🏃🏻</span><p style="font-weight: 600;">Distanza: &nbsp960 m</p>
+          </div>
+        </div>
+                <div class="chat-bubble-wrapper" style="justify-content: flex-start;" id="chat-bubble-5">
+          <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fhotemoji.com%2Fimages%2Femoji%2F0%2Fmmj5ipu6ds50.png&f=1&nofb=1&ipt=49bdd956a93d8fbdd84720256334ecc308a67e3c8141a46371f22ea984c58492&ipo=images" alt="Avatar" class="avatar">
+          <div class="chat-bubble received">
+            <span class="emoji">⏱️</span><p style="font-weight: 600;">Tempo: &nbsp11 min</p>
+          </div>
+        </div>
+      </div>
+
+      <!------------------------------- 6 ----------------------------->
+      <div class="slide-container">
+        <div class="chat-bubble-wrapper" style="justify-content: flex-end;" id="chat-bubble-1">
+          <div class="chat-bubble sent">
+            <span class="emoji">🔍</span><p style="color: #ffffff;">Leo, dove mi trovo?</p>
+            <div class="check-marks">
+              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24"><path fill="#0040ff" d="m11.602 13.76l1.412 1.412l8.466-8.466l1.414 1.415l-9.88 9.88l-6.364-6.365l1.414-1.414l2.125 2.125zm.002-2.828l4.952-4.953l1.41 1.41l-4.952 4.953zm-2.827 5.655L7.364 18L1 11.636l1.414-1.414l1.413 1.413l-.001.001z"/></svg>
+            </div>
+          </div>  
+        </div>
+        <div class="chat-bubble-wrapper" style="justify-content: flex-start;" id="chat-bubble-2">
+          <div class="avatar"></div>
+          <div class="chat-bubble received">
+            <h1>📍 Museo di Storia Naturale "Giancarlo Ligabue"</h1>
+          </div>
+        </div>
+        <div class="chat-bubble-wrapper" style="justify-content: flex-start;" id="chat-bubble-3">
+          <div class="avatar"></div>
+          <div class="chat-bubble received">
+            <p>
+              Il Museo di Storia Naturale di Venezia, fondato nel 1923, è situato nel Fontego dei Turchi sul Canal Grande. 
+              Rinnovato e riaperto nel 2010, prende il nome dall'esploratore e paleontologo Giancarlo Ligabue.
+              Le sue collezioni comprendono fossili, reperti botanici e zoologici, con particolare attenzione alla laguna veneta e alle spedizioni scientifiche.
+            </p>
+          </div>
+        </div>
+        <div class="chat-bubble-wrapper" style="justify-content: flex-start;" id="chat-bubble-4">
+          <div class="avatar"></div>
+          <div class="chat-bubble received">
+            <span class="emoji">🏃🏻</span><p style="font-weight: 600;">Distanza: &nbsp1.6 km</p>
+          </div>
+        </div>
+                <div class="chat-bubble-wrapper" style="justify-content: flex-start;" id="chat-bubble-5">
+          <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fhotemoji.com%2Fimages%2Femoji%2F0%2Fmmj5ipu6ds50.png&f=1&nofb=1&ipt=49bdd956a93d8fbdd84720256334ecc308a67e3c8141a46371f22ea984c58492&ipo=images" alt="Avatar" class="avatar">
+          <div class="chat-bubble received">
+            <span class="emoji">⏱️</span><p style="font-weight: 600;">Tempo: &nbsp18 min</p>
+          </div>
+        </div>
+      </div>
+
+      <!------------------------------- 7 ----------------------------->
+      <div class="slide-container">
+        <div class="chat-bubble-wrapper" style="justify-content: flex-end;" id="chat-bubble-1">
+          <div class="chat-bubble sent">
+            <span class="emoji">🔍</span><p style="color: #ffffff;">Leo, dove mi trovo?</p>
+            <div class="check-marks">
+              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24"><path fill="#0040ff" d="m11.602 13.76l1.412 1.412l8.466-8.466l1.414 1.415l-9.88 9.88l-6.364-6.365l1.414-1.414l2.125 2.125zm.002-2.828l4.952-4.953l1.41 1.41l-4.952 4.953zm-2.827 5.655L7.364 18L1 11.636l1.414-1.414l1.413 1.413l-.001.001z"/></svg>
+            </div>
+          </div>  
+        </div>
+        <div class="chat-bubble-wrapper" style="justify-content: flex-start;" id="chat-bubble-2">
+          <div class="avatar"></div>
+          <div class="chat-bubble received">
+            <h1>📍 Palazzo Mocenigo</h1>
+          </div>
+        </div>
+        <div class="chat-bubble-wrapper" style="justify-content: flex-start;" id="chat-bubble-3">
+          <div class="avatar"></div>
+          <div class="chat-bubble received">
+            <p>
+              Palazzo Mocenigo, risalente al XVI secolo, fu residenza della nobile famiglia Mocenigo fino al XX secolo. Donato al Comune di Venezia nel 1945, è stato trasformato in un museo del tessuto e del costume del '700 veneziano. 
+              Dal 2013 ospita anche una sezione dedicata alla storia del profumo, con un percorso olfattivo unico.
+            </p>
+          </div>
+        </div>
+        <div class="chat-bubble-wrapper" style="justify-content: flex-start;" id="chat-bubble-4">
+          <div class="avatar"></div>
+          <div class="chat-bubble received">
+            <span class="emoji">🏃🏻</span><p style="font-weight: 600;">Distanza: &nbsp1.8 km</p>
+          </div>
+        </div>
+                <div class="chat-bubble-wrapper" style="justify-content: flex-start;" id="chat-bubble-5">
+          <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fhotemoji.com%2Fimages%2Femoji%2F0%2Fmmj5ipu6ds50.png&f=1&nofb=1&ipt=49bdd956a93d8fbdd84720256334ecc308a67e3c8141a46371f22ea984c58492&ipo=images" alt="Avatar" class="avatar">
+          <div class="chat-bubble received">
+            <span class="emoji">⏱️</span><p style="font-weight: 600;">Tempo: &nbsp21 min</p>
+          </div>
+        </div>
+      </div>
+
+      <!------------------------------- 8 ----------------------------->
+      <div class="slide-container">
+        <div class="chat-bubble-wrapper" style="justify-content: flex-end;" id="chat-bubble-1">
+          <div class="chat-bubble sent">
+            <span class="emoji">🔍</span><p style="color: #ffffff;">Leo, dove mi trovo?</p>
+            <div class="check-marks">
+              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24"><path fill="#0040ff" d="m11.602 13.76l1.412 1.412l8.466-8.466l1.414 1.415l-9.88 9.88l-6.364-6.365l1.414-1.414l2.125 2.125zm.002-2.828l4.952-4.953l1.41 1.41l-4.952 4.953zm-2.827 5.655L7.364 18L1 11.636l1.414-1.414l1.413 1.413l-.001.001z"/></svg>
+            </div>
+          </div>  
+        </div>
+        <div class="chat-bubble-wrapper" style="justify-content: flex-start;" id="chat-bubble-2">
+          <div class="avatar"></div>
+          <div class="chat-bubble received">
+            <h1>📍 Palazzo Cà Pesaro</h1>
+          </div>
+        </div>
+        <div class="chat-bubble-wrapper" style="justify-content: flex-start;" id="chat-bubble-3">
+          <div class="avatar"></div>
+          <div class="chat-bubble received">
+            <p>
+              Ca' Pesaro, imponente palazzo barocco sul Canal Grande, fu progettato da Baldassarre Longhena nel XVII secolo per la famiglia Pesaro. 
+              Lasciato alla città di Venezia nel 1902, oggi ospita la Galleria Internazionale d'Arte Moderna e il Museo d'Arte Orientale. 
+              È noto per la sua facciata maestosa e per le importanti collezioni d'arte moderna e asiatica.
+            </p>
+          </div>
+        </div>
+        <div class="chat-bubble-wrapper" style="justify-content: flex-start;" id="chat-bubble-4">
+          <div class="avatar"></div>
+          <div class="chat-bubble received">
+            <span class="emoji">🏃🏻</span><p style="font-weight: 600;">Distanza: &nbsp2.0 km</p>
+          </div>
+        </div>
+                <div class="chat-bubble-wrapper" style="justify-content: flex-start;" id="chat-bubble-5">
+          <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fhotemoji.com%2Fimages%2Femoji%2F0%2Fmmj5ipu6ds50.png&f=1&nofb=1&ipt=49bdd956a93d8fbdd84720256334ecc308a67e3c8141a46371f22ea984c58492&ipo=images" alt="Avatar" class="avatar">
+          <div class="chat-bubble received">
+            <span class="emoji">⏱️</span><p style="font-weight: 600;">Tempo: &nbsp24 min</p>
+          </div>
+        </div>
+      </div>
+
+      <!------------------------------- 9 ----------------------------->
+      <div class="slide-container">
+        <div class="chat-bubble-wrapper" style="justify-content: flex-end;" id="chat-bubble-1">
+          <div class="chat-bubble sent">
+            <span class="emoji">🔍</span><p style="color: #ffffff;">Leo, dove mi trovo?</p>
+            <div class="check-marks">
+              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24"><path fill="#0040ff" d="m11.602 13.76l1.412 1.412l8.466-8.466l1.414 1.415l-9.88 9.88l-6.364-6.365l1.414-1.414l2.125 2.125zm.002-2.828l4.952-4.953l1.41 1.41l-4.952 4.953zm-2.827 5.655L7.364 18L1 11.636l1.414-1.414l1.413 1.413l-.001.001z"/></svg>
+            </div>
+          </div>  
+        </div>
+        <div class="chat-bubble-wrapper" style="justify-content: flex-start;" id="chat-bubble-2">
+          <div class="avatar"></div>
+          <div class="chat-bubble received">
+            <h1>📍 Mercato di Rialto</h1>
+          </div>
+        </div>
+        <div class="chat-bubble-wrapper" style="justify-content: flex-start;" id="chat-bubble-3">
+          <div class="avatar"></div>
+          <div class="chat-bubble received">
+            <p>
+              Il Mercato di Rialto, attivo fin dal 1097, è il cuore commerciale di Venezia da secoli. Ricostruito dopo un incendio nel 1514, è diviso in due aree: il mercato del pesce e quello della frutta e verdura.
+              Ancora oggi è un vivace centro di scambi, famoso per i suoi banchi colorati e l'atmosfera autentica, frequentato da locali e turisti.
+            </p>
+          </div>
+        </div>
+        <div class="chat-bubble-wrapper" style="justify-content: flex-start;" id="chat-bubble-4">
+          <div class="avatar"></div>
+          <div class="chat-bubble received">
+            <span class="emoji">🏃🏻</span><p style="font-weight: 600;">Distanza: &nbsp2.5 km</p>
+          </div>
+        </div>
+        <div class="chat-bubble-wrapper" style="justify-content: flex-start;" id="chat-bubble-5">
+          <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fhotemoji.com%2Fimages%2Femoji%2F0%2Fmmj5ipu6ds50.png&f=1&nofb=1&ipt=49bdd956a93d8fbdd84720256334ecc308a67e3c8141a46371f22ea984c58492&ipo=images" alt="Avatar" class="avatar">
+          <div class="chat-bubble received">
+            <span class="emoji">⏱️</span><p style="font-weight: 600;">Tempo: &nbsp30 min</p>
+          </div>
+        </div>
+      </div>
+
+      <!------------------------------- 10 ----------------------------->
+      <div class="slide-container">
+        <div class="chat-bubble-wrapper" style="justify-content: flex-end;" id="chat-bubble-1">
+          <div class="chat-bubble sent">
+            <span class="emoji">🔍</span><p style="color: #ffffff;">Leo, dove mi trovo?</p>
+            <div class="check-marks">
+              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24"><path fill="#0040ff" d="m11.602 13.76l1.412 1.412l8.466-8.466l1.414 1.415l-9.88 9.88l-6.364-6.365l1.414-1.414l2.125 2.125zm.002-2.828l4.952-4.953l1.41 1.41l-4.952 4.953zm-2.827 5.655L7.364 18L1 11.636l1.414-1.414l1.413 1.413l-.001.001z"/></svg>
+            </div>
+          </div>  
+        </div>
+        <div class="chat-bubble-wrapper" style="justify-content: flex-start;" id="chat-bubble-2">
+          <div class="avatar"></div>
+          <div class="chat-bubble received">
+            <h1>📍 Chiesa di San Giacomo di Rialto</h1>
+          </div>
+        </div>
+        <div class="chat-bubble-wrapper" style="justify-content: flex-start;" id="chat-bubble-3">
+          <div class="avatar"></div>
+          <div class="chat-bubble received">
+            <p>
+              La Chiesa di San Giacomo di Rialto, secondo la tradizione fondata nel 421, è considerata una delle chiese più antiche di Venezia. Ricostruita più volte, l'edificio attuale risale al XII secolo con modifiche successive. 
+              È nota per il suo grande orologio sulla facciata e per la sua posizione strategica nell'area mercantile di Rialto.
+            </p>
+          </div>
+        </div>
+        <div class="chat-bubble-wrapper" style="justify-content: flex-start;" id="chat-bubble-4">
+          <div class="avatar"></div>
+          <div class="chat-bubble received">
+            <span class="emoji">🏃🏻</span><p style="font-weight: 600;">Distanza: &nbsp2.7 km</p>
+          </div>
+        </div>
+        <div class="chat-bubble-wrapper" style="justify-content: flex-start;" id="chat-bubble-5">
+          <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fhotemoji.com%2Fimages%2Femoji%2F0%2Fmmj5ipu6ds50.png&f=1&nofb=1&ipt=49bdd956a93d8fbdd84720256334ecc308a67e3c8141a46371f22ea984c58492&ipo=images" alt="Avatar" class="avatar">
+          <div class="chat-bubble received">
+            <span class="emoji">⏱️</span><p style="font-weight: 600;">Tempo: &nbsp32 min</p>
+          </div>
+        </div>
+      </div>
+
+      <!------------------------------- 11 ----------------------------->
+      <div class="slide-container">
+        <div class="chat-bubble-wrapper" style="justify-content: flex-end;" id="chat-bubble-1">
+          <div class="chat-bubble sent">
+            <span class="emoji">🔍</span><p style="color: #ffffff;">Leo, dove mi trovo?</p>
+            <div class="check-marks">
+              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24"><path fill="#0040ff" d="m11.602 13.76l1.412 1.412l8.466-8.466l1.414 1.415l-9.88 9.88l-6.364-6.365l1.414-1.414l2.125 2.125zm.002-2.828l4.952-4.953l1.41 1.41l-4.952 4.953zm-2.827 5.655L7.364 18L1 11.636l1.414-1.414l1.413 1.413l-.001.001z"/></svg>
+            </div>
+          </div>  
+        </div>
+        <div class="chat-bubble-wrapper" style="justify-content: flex-start;" id="chat-bubble-2">
+          <div class="avatar"></div>
+          <div class="chat-bubble received">
+            <h1>📍 Ponte di Rialto</h1>
+          </div>
+        </div>
+        <div class="chat-bubble-wrapper" style="justify-content: flex-start;" id="chat-bubble-3">
+          <div class="avatar"></div>
+          <div class="chat-bubble received">
+            <p>
+              Il Ponte di Rialto, inizialmente costruito in legno nel XII secolo e più volte ricostruito, fu completato nella sua forma attuale in pietra d'Istria nel 1591 su progetto di Antonio da Ponte. È il più antico dei quattro ponti sul Canal Grande e fu per secoli l'unico collegamento tra le due sponde. 
+              La sua struttura ad arco unico, con due file di botteghe, rappresenta un capolavoro dell'ingegneria rinascimentale veneziana.
+            </p>
+          </div>
+        </div>
+        <div class="chat-bubble-wrapper" style="justify-content: flex-start;" id="chat-bubble-4">
+          <div class="avatar"></div>
+          <div class="chat-bubble received">
+            <span class="emoji">🏃🏻</span><p style="font-weight: 600;">Distanza: &nbsp2.8 km</p>
+          </div>
+        </div>
+        <div class="chat-bubble-wrapper" style="justify-content: flex-start;" id="chat-bubble-5">
+          <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fhotemoji.com%2Fimages%2Femoji%2F0%2Fmmj5ipu6ds50.png&f=1&nofb=1&ipt=49bdd956a93d8fbdd84720256334ecc308a67e3c8141a46371f22ea984c58492&ipo=images" alt="Avatar" class="avatar">
+          <div class="chat-bubble received">
+            <span class="emoji">⏱️</span><p style="font-weight: 600;">Tempo: &nbsp33 min</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- SEZIONE DEGLI SCRIPT JS -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.js'></script>
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <script src="https://unpkg.com/leaflet-routing-machine/dist/leaflet-routing-machine.js"></script>
+
+  <script src="javascript.js"></script>
+
+</body>
+</html>
